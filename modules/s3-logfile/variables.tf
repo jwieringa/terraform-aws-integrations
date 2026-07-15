@@ -65,6 +65,12 @@ variable "lambda_function_timeout" {
   default     = 600
 }
 
+variable "cloudwatch_logs_retention_in_days" {
+  type        = number
+  description = "Number of days to retain the Lambda's CloudWatch log events. null keeps logs indefinitely."
+  default     = null
+}
+
 variable "lambda_package_bucket" {
   type        = string
   description = "Internal. Override S3 bucket where lambda function zip is located."
