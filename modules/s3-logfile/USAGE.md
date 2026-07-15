@@ -34,6 +34,7 @@
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_agentless_integrations_version"></a> [agentless\_integrations\_version](#input\_agentless\_integrations\_version) | Version of https://github.com/honeycombio/agentless-integrations-for-aws to use. Default is LATEST, but note that specifying this does not automatically update the lambda to use the newest versions as they are released. | `string` | `"LATEST"` | no |
+| <a name="input_cloudwatch_logs_retention_in_days"></a> [cloudwatch\_logs\_retention\_in\_days](#input\_cloudwatch\_logs\_retention\_in\_days) | Number of days to retain the Lambda's CloudWatch log events. null keeps logs indefinitely. | `number` | `null` | no |
 | <a name="input_environment"></a> [environment](#input\_environment) | The environment this code is running in. If set, will be added as 'env' to each event. | `string` | `""` | no |
 | <a name="input_filter_fields"></a> [filter\_fields](#input\_filter\_fields) | Strings to specify which field names to remove from events. | `list(string)` | `[]` | no |
 | <a name="input_honeycomb_api_host"></a> [honeycomb\_api\_host](#input\_honeycomb\_api\_host) | Internal. Alternative Honeycomb API host. | `string` | `"https://api.honeycomb.io"` | no |
