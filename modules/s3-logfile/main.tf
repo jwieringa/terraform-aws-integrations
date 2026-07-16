@@ -47,6 +47,8 @@ module "s3_processor" {
   memory_size   = var.lambda_function_memory
   timeout       = var.lambda_function_timeout
 
+  cloudwatch_logs_retention_in_days = var.cloudwatch_logs_retention_in_days
+
   create_package = false
   s3_existing_package = {
     bucket = coalesce(var.lambda_package_bucket, "honeycomb-integrations-${data.aws_region.current.name}")
